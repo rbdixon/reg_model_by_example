@@ -1,0 +1,54 @@
+---
+title: "Chapter 02"
+output: html_document
+---
+
+# Data
+```{r data}
+library(ggplot2)
+set.seed(1)
+n = 100
+D = data.frame(
+  x = rnorm(n),
+  y = rnorm(n)
+)
+```
+
+# 2.1 Covariance
+
+Deviation from Mean and Product of Deviations from the Mean:
+
+```{r Deviaion}
+D$devp = (D$x-mean(D$x)) * (D$y-mean(D$y))
+sum(D$devp)/(n-1)
+cov(D$x, D$y)
+```
+
+Covariance is the sum of the product of x and y's deviation from the mean divided by n-1.
+
+```{r Covariance}
+D$devp.col = ifelse(D$devp<=0, "black", "red")
+ggplot(D, aes(x,y)) +
+  geom_point(color=D$devp.col)
+```
+
+Sign of the product of the deviation of the mean roughly equal to the *direction* of the linear relationship but nothing
+about the *strength* of that relationship.
+
+# 2.2 Correlation Coefficient
+
+Standardize both X and Y:
+
+```{r Standardize}
+D$zx = (D$x-mean(D$x))/sd(D$x)
+D$zy = (D$y-mean(D$y))/sd(D$y)
+(sum(D$zx*D$zy))/(n-1)
+cor(D$x, D$y)
+```
+
+Measures both the *direction* and *strength* of the linear relationship between variables.
+
+# 2.4 Simple Linear Regression
+
+> How do you know, in advance, if the relationship between X and Y is indeed
+> ameanable to modeling with a linear equation?
