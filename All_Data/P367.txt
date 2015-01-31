@@ -1,0 +1,30 @@
+Bay	PCB84	PCB85	ln(PCB84)	ln(PCB85)
+Casco Bay               	95.3     	77.55    	4.55682  	4.35092 
+Merrimack River          	53.0   	29.23    	3.96973  	3.37520  
+Salem Harbor             	533.6    	403.10    	6.27961  	5.99918 
+Boston Harbor            	17104.9  	736.00  	9.74712  	6.60123 
+Buzzards' Bay            	308.5    	192.15   	5.73159  	5.25828 
+Narragansett Bay         	160.0  	220.60    	5.07492  	5.39635 
+E. Long Island Sound     	10.0   	8.62     	2.30259  	2.15409 
+W. Long Island Sound     	234.4    	174.31   	5.45716  	5.16084 
+Raritan Bay              	443.9    	529.28   	6.09558  	6.27152 
+Delaware Bay             	2.5  	130.67   	0.91629  	4.87268 
+Lower Chesapeake Bay     	51.0   	39.74    	3.93183  	3.68236 
+Charleston Harbor        	9.1  	8.43     	2.20827  	2.13180  
+St. Johns River          	140  	120.04   	4.94164  	4.78783 
+Apalachicola Bay         	12.0   	11.93    	2.48491  	2.47906 
+Mississippi R. Delta     	34.0   	30.14    	3.52636  	3.40585 
+San Diego Harbor         	422.1    	531.67   	6.04524  	6.27602 
+San Diego Bay            	6.7  	9.30  	1.90806  	2.23001 
+Dana Point               	7.1  	5.74     	1.95445  	1.74746 
+Seal Beach               	46.7     	46.47    	3.84396  	3.83881 
+San Pedro Canyon         	159.6    	176.90    	5.07242  	5.17558 
+Santa Monica Bay         	14.0   	13.69    	2.63906  	2.61667 
+Bodega Bay               	4.2  	4.89     	1.43031  	1.58719 
+Coos Bay                 	3.2  	6.60  	1.16002  	1.88707 
+Columbia River Mouth     	8.8  	6.73     	2.17134  	1.90658 
+Nisqually Beach          	4.2  	4.28     	1.44220   	1.45395 
+Commencement Bay         	20.6  	20.50     	3.02529  	3.02042 
+Elliott Bay              	20.6  	20.50     	3.02529  	3.02042 
+Lutak Inlet              	5.5  	5.80  	1.70475  	1.75786 
+Nahku Bay                	6.6  	5.08     	1.88707  	1.62531 

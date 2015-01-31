@@ -1,0 +1,36 @@
+Hill Race  	Time  	Distance  	Climb 
+Greenmantle New Year Dash  	965  	2.5  	650  
+Carnethy  	2901  	6  	2500  
+Craig Dunain  	2019  	6  	900  
+Ben Rha  	2736  	7.5  	800  
+Ben Lomond  	3736  	8  	3070  
+Goatfell  	4393  	8  	2866  
+Bens of Jura  	12277  	16  	7500  
+Cairnpapple  	2182  	6  	800  
+Scolty  	1785  	5  	800  
+Traprain Law  	2385  	6  	650  
+Lairig Ghru  	11560  	28  	2100  
+Dollar  	2583  	5  	2000  
+Lomonds of Fife  	3900  	9.5  	2200  
+Cairn Table  	2648  	6  	500  
+Eildon Two  	1616  	4.5  	1500  
+Cairngorm  	4335  	10  	3000  
+Seven Hills of Edinburgh  	5905  	14  	2200  
+Knock Hill  	4719  	3  	350  
+Black Hill  	1045  	4.5  	1000  
+Creag Beag  	1954  	5.5  	600  
+Kildoon  	957  	3  	300  
+Meall Ant-Suiche  	1674  	3.5  	1500  
+Half Ben Nevis  	2859  	6  	2200  
+Cow Hill  	1076  	2  	900  
+North Berwick Law  	1121  	3  	600  
+Creag Dubh  	1573  	4  	2000  
+Burnswark  	2066  	6  	800  
+Largo  	1714  	5  	950  
+Criffel  	3030  	6.5  	1750  
+Achmony  	1257  	5  	500  
+Ben Nevis  	5135  	10  	4400  
+Knockfarrel  	1943  	6  	600  
+Two Breweries Fell  	10215  	18  	5200  
+Cockleroi  	1686  	4.5  	850  
+Moffat Chase  	9590  	20  	5000  
