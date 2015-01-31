@@ -130,10 +130,16 @@ With R's `lm()` function:
 
 ```r
 COMPUTER.lm = lm(Minutes ~ Units, COMPUTER)
+layout(matrix(1:4,2,2))
 plot(COMPUTER.lm)
 ```
 
-![](Chapter_02_files/figure-html/LSR_with_LM-1.png) ![](Chapter_02_files/figure-html/LSR_with_LM-2.png) ![](Chapter_02_files/figure-html/LSR_with_LM-3.png) ![](Chapter_02_files/figure-html/LSR_with_LM-4.png) 
+![](Chapter_02_files/figure-html/LSR_with_LM-1.png) 
+
+Explanation of plots from [Using R for Linear Regression](http://www.montefiore.ulg.ac.be/~kvansteen/GBIO0009-1/ac20092010/Class8/Using%20R%20for%20linear%20regression.pdf):
+
+> The plot in the upper left shows the residual errors plotted versus their fitted values. The residuals should be randomly distributed around the horizontal line representing a residual error of zero; that is, there should not be a distinct trend in the distribution of points. The plot in the lower left is a standard Q-Q plot, which should suggest that the residual errors are normally distributed. The scale-location plot in the upper right shows the square root of the standardized residuals (sort of a square root of relative error) as a function of the fitted values. Again, there should be no obvious trend in this plot. Finally, the plot in the lower right shows each points leverage, which is a measure of its importance in determining the regression result. Superimposed on the plot are contour lines for the Cook’s distance, which is another measure of the importance of each observation to the regression. Smaller distances means that removing the observation has little affect on the regression results. Distances larger than 1 are suspicious and suggest the presence of a possible outlier or a poor model.
+
 
 ```r
 ggplot(COMPUTER, aes(Units, Minutes)) +
@@ -141,7 +147,7 @@ ggplot(COMPUTER, aes(Units, Minutes)) +
   geom_line(data=fortify(COMPUTER.lm), aes(Units, .fitted))
 ```
 
-![](Chapter_02_files/figure-html/LSR_with_LM-5.png) 
+![](Chapter_02_files/figure-html/Plot_COMPUTER.lm-1.png) 
 
 # 2.6 Test of Hypothesis
 
@@ -363,7 +369,10 @@ print(summary(COMPUTER.lm))
 Evidence of a good fit for this simple model:
 
 * t-Value for the predictor Units (aka. $\hat\beta_1$) is large. (relative to what, exactly?)
-* The two-sided p-value is very small.
+* The two-sided p-value is very small. [Using R for Linear Regression](http://www.montefiore.ulg.ac.be/~kvansteen/GBIO0009-1/ac20092010/Class8/Using%20R%20for%20linear%20regression.pdf) has a good explanation of what the _Pr(>|t|) value means:
+
+> Estimates for the model’s coefficients are provided along with the their (sic) standard deviations (‘Std Error’), and a t-value and probability for a null hypothesis that the coefficients have values of zero.
+
 * $R^2$ is close to 1 indicating that almost all of the variance in the response variable is explained by the model.
 
 # Homework
