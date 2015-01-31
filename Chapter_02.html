@@ -192,21 +192,21 @@ plot(COMPUTER.lm)</code></pre>
 <p>Spreadsheet Bob would estimate off the data: <span class="math">\(\overline{(\frac{minutes}{units})}\)</span> = 16.6437925. I’d be inclined to agree since there is no instance of a repair in the data where minutes-per-unit was less than 12. But look at the minutes added per each additional unit, on average:</p>
 <pre class="r"><code>COMPUTER %&gt;%
   group_by(Units) %&gt;%
-  summarise(Minutes=mean(Minutes)) %&gt;%
-  mutate(Delta=Minutes-lag(Minutes))</code></pre>
-<pre><code>## Source: local data frame [10 x 3]
+  summarise(MeanMinutes=mean(Minutes), MinPerUnit=sum(Minutes)/sum(Units)) %&gt;%
+  mutate(DeltaMeanMinutes=MeanMinutes-lag(MeanMinutes))</code></pre>
+<pre><code>## Source: local data frame [10 x 4]
 ## 
-##    Units Minutes Delta
-## 1      1    23.0    NA
-## 2      2    29.0   6.0
-## 3      3    49.0  20.0
-## 4      4    69.0  20.0
-## 5      5    87.0  18.0
-## 6      6    96.5   9.5
-## 7      7   109.0  12.5
-## 8      8   119.0  10.0
-## 9      9   147.0  28.0
-## 10    10   160.0  13.0</code></pre>
+##    Units MeanMinutes MinPerUnit DeltaMeanMinutes
+## 1      1        23.0   23.00000               NA
+## 2      2        29.0   14.50000              6.0
+## 3      3        49.0   16.33333             20.0
+## 4      4        69.0   17.25000             20.0
+## 5      5        87.0   17.40000             18.0
+## 6      6        96.5   16.08333              9.5
+## 7      7       109.0   15.57143             12.5
+## 8      8       119.0   14.87500             10.0
+## 9      9       147.0   16.33333             28.0
+## 10    10       160.0   16.00000             13.0</code></pre>
 <p>Eh… maybe the boss was correct? 5 cases where the delta is near 12, 4 where it isn’t close.</p>
 <p>Use the t-test:</p>
 <ul>

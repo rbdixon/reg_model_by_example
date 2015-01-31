@@ -128,8 +128,8 @@ Spreadsheet Bob would estimate off the data: $\overline{(\frac{minutes}{units})}
 ```{r min_per_unit}
 COMPUTER %>%
   group_by(Units) %>%
-  summarise(Minutes=mean(Minutes)) %>%
-  mutate(Delta=Minutes-lag(Minutes))
+  summarise(MeanMinutes=mean(Minutes), MinPerUnit=sum(Minutes)/sum(Units)) %>%
+  mutate(DeltaMeanMinutes=MeanMinutes-lag(MeanMinutes))
 ```
 
 Eh... maybe the boss was correct? 5 cases where the delta is near 12, 4 where it isn't close.

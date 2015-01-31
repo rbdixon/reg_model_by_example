@@ -184,24 +184,24 @@ Spreadsheet Bob would estimate off the data: $\overline{(\frac{minutes}{units})}
 ```r
 COMPUTER %>%
   group_by(Units) %>%
-  summarise(Minutes=mean(Minutes)) %>%
-  mutate(Delta=Minutes-lag(Minutes))
+  summarise(MeanMinutes=mean(Minutes), MinPerUnit=sum(Minutes)/sum(Units)) %>%
+  mutate(DeltaMeanMinutes=MeanMinutes-lag(MeanMinutes))
 ```
 
 ```
-## Source: local data frame [10 x 3]
+## Source: local data frame [10 x 4]
 ## 
-##    Units Minutes Delta
-## 1      1    23.0    NA
-## 2      2    29.0   6.0
-## 3      3    49.0  20.0
-## 4      4    69.0  20.0
-## 5      5    87.0  18.0
-## 6      6    96.5   9.5
-## 7      7   109.0  12.5
-## 8      8   119.0  10.0
-## 9      9   147.0  28.0
-## 10    10   160.0  13.0
+##    Units MeanMinutes MinPerUnit DeltaMeanMinutes
+## 1      1        23.0   23.00000               NA
+## 2      2        29.0   14.50000              6.0
+## 3      3        49.0   16.33333             20.0
+## 4      4        69.0   17.25000             20.0
+## 5      5        87.0   17.40000             18.0
+## 6      6        96.5   16.08333              9.5
+## 7      7       109.0   15.57143             12.5
+## 8      8       119.0   14.87500             10.0
+## 9      9       147.0   16.33333             28.0
+## 10    10       160.0   16.00000             13.0
 ```
 
 Eh... maybe the boss was correct? 5 cases where the delta is near 12, 4 where it isn't close.
