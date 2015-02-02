@@ -217,6 +217,8 @@ Evidence of a good fit for this simple model:
 > Estimates for the model’s coefficients are provided along with the their (sic) standard deviations (‘Std Error’), and a t-value and probability for a null hypothesis that the coefficients have values of zero.
 
 * $R^2$ is close to 1 indicating that almost all of the variance in the response variable is explained by the model.
+* $R^2=[Cor(Y, \hat Y)]^2=1-\frac{\sum (y_i-\hat y_i)^2}{\sum (y_i- y_i)^2}$
+* As predicted values ($\hat y_i$) get closer to the actual training data ($y_i$) then $R \to 1$.
 
 # Homework
 

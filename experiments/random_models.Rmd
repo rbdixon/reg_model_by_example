@@ -1,0 +1,29 @@
+```{r Setup, include=FALSE}
+library(dplyr)
+library(magrittr)
+```
+
+```{r Run models}
+n = 100
+r = 100
+
+MODELS = data.frame(n=1:n)
+
+MODELS %<>%
+  rowwise() %>%
+  do(m = lm(Y~X, data.frame(X=rnorm(r), Y=rnorm(r)) ))
+
+SIG = MODELS %>%
+  do({
+    data.frame(
+      t=summary(.$m)$coefficients[1,3],
+      p=summary(.$m)$coefficients[1,4]
+      )
+  }) %>%
+  mutate(
+    sig = p<=0.05
+  ) %>%
+  filter(sig)
+
+print(SIG)
+```

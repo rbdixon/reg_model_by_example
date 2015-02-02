@@ -1,0 +1,20 @@
+---
+title: "Chapter 03"
+output:
+  html_document:
+    keep_md: yes
+    toc: yes
+---
+```{r setup, include=FALSE}
+library(ggplot2)
+library(dplyr)
+```
+
+# 3.4 Multiple Linear Regression Parameter Estimation
+
+```{r Supervisor Data}
+SUP = read.table("All_Data//P060.txt", sep="\t", header=TRUE)
+SUP.lm = lm(Y ~ X1+X2+X3+X4+X5+X6, SUP)
+print(summary(SUP.lm))
+```
+
