@@ -1,0 +1,23 @@
+---
+title: "Chapter 4"
+output:
+  html_document:
+    keep_md: yes
+---
+
+# 4.5.2 Hamilton's Data
+
+```{r Hamilton Fit}
+HAM = read.table("All_Data//P103.txt", sep="\t", header=TRUE)
+HAM.lm1 = lm(Y ~ X1, HAM)
+print(summary(HAM.lm1))
+HAM.lm2 = lm(Y ~ X2, HAM)
+print(summary(HAM.lm2))
+HAM.lm3 = lm(Y ~ X1 + X2, HAM)
+print(summary(HAM.lm3))
+```
+
+```{r ggpairs}
+library(GGally)
+ggpairs(HAM)
+```
