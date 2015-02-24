@@ -18,3 +18,26 @@ SUP.lm = lm(Y ~ X1+X2+X3+X4+X5+X6, SUP)
 print(summary(SUP.lm))
 ```
 
+# Exercises
+
+## 3.3 Exam Data
+
+```{r 3.3}
+EXAM = read.table("All_Data/P083.txt", sep="\t", header=TRUE)
+E.lm1 = lm(F ~ P1, EXAM)
+print(summary(E.lm1))
+print(anova(E.lm1))
+E.lm2 = lm(F ~ P2, EXAM)
+print(summary(E.lm2))
+print(anova(E.lm2))
+E.lm3 = lm(F ~ P1 + P2, EXAM)
+print(summary(E.lm3))
+print(anova(E.lm3))
+ggplot(fortify(E.lm1)) + 
+  geom_point(aes(P1, F), color="red") +
+  geom_line(aes(P1, .fitted))
+ggplot(fortify(E.lm2)) + 
+  geom_point(aes(P2, F), color="blue") +
+  geom_line(aes(P2, .fitted))
+```
+
